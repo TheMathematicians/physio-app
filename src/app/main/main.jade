@@ -1,0 +1,22 @@
+div(layout='vertical', layout-fill='')
+  md-content
+    header
+      acme-navbar(creation-date='main.creationDate')
+    section.jumbotron
+      h1 'Allo, 'Allo!
+      p.lead
+        img(src='assets/images/yeoman.png', alt="I'm Yeoman")
+        br
+        |         Always a pleasure scaffolding your apps.
+      md-button.md-raised.animated.infinite(ng-class='main.classAnimation', ng-click='main.showToastr()') Splendid Toastr
+      p
+        | With ♥ thanks to the contributions of
+        acme-malarkey(extra-values="['Yeoman', 'Gulp', 'Angular']")
+    .techs(layout-align='center')
+      md-card(ng-repeat="awesomeThing in main.awesomeThings | orderBy:'rank'")
+        md-card-content
+          img.pull-right(ng-src='assets/images/{{ awesomeThing.logo }}', alt='{{ awesomeThing.title }}')
+          h3.md-title {{ awesomeThing.title }}
+          p {{ awesomeThing.description }}
+        .md-action-buttons
+          md-button(ng-href='{{ awesomeThing.url }}') Website
