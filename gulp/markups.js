@@ -15,6 +15,7 @@ gulp.task('markups', function() {
 
   return gulp.src(path.join(conf.paths.src, '/app/**/*.jade'))
     .pipe($.consolidate('jade', { basedir: conf.paths.src, doctype: 'html', pretty: '  ' })).on('error', conf.errorHandler('Jade'))
+    .pipe($.debug({ title: 'markups' }))
     .pipe($.rename(renameToHtml))
     .pipe(gulp.dest(path.join(conf.paths.tmp, '/serve/app/')))
     .pipe(browserSync.stream());
