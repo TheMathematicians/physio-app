@@ -1,5 +1,19 @@
 # physio-app
 
+## Setting up dev env
+* Make sure to have
+  * node v >= 6.5.0
+  * npm v >= 3.10.3
+* Install the required global modules
+  
+  ```shell
+  #Project management tools
+  npm i -g gulp bower
+  
+  #Testing tools
+  npm i -g protractor
+  ```
+
 ## Running the App
 To run the app do the following:
 * Clone the repo
