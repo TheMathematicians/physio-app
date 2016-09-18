@@ -48,9 +48,37 @@ To run the app do the following:
 * To run the app on a server do
 
   ```shell
+  #for serving development build
   gulp serve
+  
+  #for serving production build
+  gulp serve:dist
   ```
   This will automatically run the app in the browser with watch and browsersync enabled.
+  
+## Testing the App
+* **Unit testing**
+
+  * Uses karma
+  * A gulp is defined to run these tests
+  
+    ```shell
+    gulp test
+    ```
+* **End-to-end testing**
+  
+  * Uses protractor
+  * A gulp task is defined to run these tests
+    
+    ```shell
+    #for development build testing
+    gulp protractor
+      #or
+    gulp protractor:src
+    
+    #for production build testing
+    gulp protractor:dist
+    ```
   
 ## Tools and Tech
 [![Logo](src/assets/images/angular.png)](https://angularjs.org/)
