@@ -1,13 +1,40 @@
-#content(layout='column', flex='', role='registration', layout-align='center')
-	md-content#content(layout='vertical', flex='')
+#content(layout='column', flex='', role='registration')
+
+	md-content#content(layout='column', flex='', layout-align='center center')
+
 		div(layout='row', layout-align='center certer', layout-fill='')
-			md-whiteframe(ng-class="{ md-whiteframe-z1: registration.$mdMedia('gt-xs')}",layout='column', flex='100', flex-gt-xs='30' layout-pedding='')
-				md-content(md-theme='docks-dark')
+
+			//- Adding a whiteframe elevation when on a window of width > 600px
+			md-whiteframe(ng-class="{ 'md-whiteframe-z3': registration.$mdMedia('gt-xs') }", layout='column', flex='100', flex-gt-xs='30', layout-padding='')
+				
+				md-content(md-theme='docs-dark')
+
 					div(layout='row')
 						md-input-container(flex)
-							label First name
-							input(ng-model='user.firstname')
+							label Username
+							input(ng-model='user.username')
+
 					div(layout='row')
 						md-input-container(flex)
-							label Last name
-							input(ng-model='user.lastname')
+							label Mobile No
+							input(ng-model='user.mobileno')
+
+					div(layout='row')
+						md-input-container(flex)
+							label Email
+							input(ng-model='user.email')
+
+					div(layout='row')
+						md-input-container(flex)
+							label Passcode
+							input(ng-model='user.passcode')
+
+					div(layout='row')
+						md-input-container(flex)
+							label Conform Passcode
+							input(ng-model='user.conformpasscode')
+
+					div(layout='row')
+						md-input-container(flex, layout='column', layout-gt-xs='row', layout-align='center', layout-align-gt-xs='center center')
+							md-button.md-raised(flex='50', flex-xs='100', flex-sm='100') Cancel
+							md-button.md-raised.md-primary(flex='50', flex-xs='100' flex-sm='100') Submit
