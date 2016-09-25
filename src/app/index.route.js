@@ -19,6 +19,12 @@
         templateUrl: 'app/login/partial-login.html',
         controller: 'LoginController',
         controllerAs: 'login'
+      })
+      .state('registration', {
+        url: '/registration',
+        templateUrl: 'app/registration/partial-registration.html',
+        controller: 'RegistrationController',
+        controllerAs: 'registration'
       });
 
     $urlRouterProvider.otherwise('/');
