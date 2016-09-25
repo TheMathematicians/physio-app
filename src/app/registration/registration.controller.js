@@ -6,7 +6,9 @@
     .controller('RegistrationController', RegistrationController);
 
   /** @ngInject */
-  function RegistrationController() {
-    //var vm = this;
+  function RegistrationController($mdMedia) {
+    var vm = this;
+
+    vm.$mdMedia = $mdMedia;
   }
 })();

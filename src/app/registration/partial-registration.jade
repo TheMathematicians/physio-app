@@ -1,13 +1,13 @@
-#content(layout='column', flex='', role='registration')
+#content(layout='column', flex='', role='main')
 
 	md-content#content(layout='column', flex='', layout-align='center center')
 
-		div(layout='row', layout-align='center certer', layout-fill='')
+		div(layout='row', layout-align='center center', layout-fill='')
 
 			//- Adding a whiteframe elevation when on a window of width > 600px
 			md-whiteframe(ng-class="{ 'md-whiteframe-z3': registration.$mdMedia('gt-xs') }", layout='column', flex='100', flex-gt-xs='30', layout-padding='')
 				
-				md-content(md-theme='docs-dark')
+				md-content
 
 					div(layout='row')
 						md-input-container(flex)
