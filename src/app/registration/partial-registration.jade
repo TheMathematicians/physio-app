@@ -1,0 +1,13 @@
+#content(layout='column', flex='', role='registration', layout-align='center')
+	md-content#content(layout='vertical', flex='')
+		div(layout='row', layout-align='center certer', layout-fill='')
+			md-whiteframe(ng-class="{ md-whiteframe-z1: registration.$mdMedia('gt-xs')}",layout='column', flex='100', flex-gt-xs='30' layout-pedding='')
+				md-content(md-theme='docks-dark')
+					div(layout='row')
+						md-input-container(flex)
+							label First name
+							input(ng-model='user.firstname')
+					div(layout='row')
+						md-input-container(flex)
+							label Last name
+							input(ng-model='user.lastname')
