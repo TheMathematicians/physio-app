@@ -25,6 +25,12 @@
         templateUrl: 'app/registration/partial-registration.html',
         controller: 'RegistrationController',
         controllerAs: 'registration'
+      })
+      .state('firebase-test', {
+        url: '/firebase-test',
+        templateUrl: 'app/firebase-test/partial-firebase-test.html',
+        controller: 'FirebaseTestController',
+        controllerAs: 'fbTest'
       });
 
     $urlRouterProvider.otherwise('/');

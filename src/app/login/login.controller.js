@@ -6,7 +6,7 @@
     .controller('LoginController', LoginController);
 
   /** @ngInject */
-  function LoginController($scope, $mdMedia) {
+  function LoginController($mdMedia) {
     var vm = this;
 
     // Media query from angular material
