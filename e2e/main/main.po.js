@@ -10,6 +10,10 @@ var MainPage = function() {
   this.h1El = this.jumbEl.element(by.css('h1'));
   this.imgEl = this.jumbEl.element(by.css('img'));
   this.thumbnailEls = element(by.css('body')).all(by.repeater('awesomeThing in main.awesomeThings'));
+  this.toLoginBtnEl = element(by.css('[aria-label=Login]'));
 };
 
-module.exports = new MainPage();
+// module.exports = new MainPage();
+module.exports = function() { 
+  return new MainPage(); 
+};

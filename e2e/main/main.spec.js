@@ -5,7 +5,7 @@ describe('The main view', function () {
 
   beforeEach(function () {
     browser.get('/index.html');
-    page = require('./main.po');
+    page = require('../pages').main();
   });
 
   it('should include jumbotron with correct data', function() {
@@ -16,6 +16,12 @@ describe('The main view', function () {
 
   it('should list more than 5 awesome things', function () {
     expect(page.thumbnailEls.count()).toBeGreaterThan(5);
+  });
+
+  it('should redirect to login page on Login click', function() {
+    page.toLoginBtnEl.click().then(function() {
+      expect(browser.getCurrentUrl()).toContain('#/login');
+    });
   });
 
 });
