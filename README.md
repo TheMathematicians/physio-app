@@ -72,12 +72,12 @@ To run the app do the following:
     
     ```shell
     #for development build testing
-    gulp protractor
+    gulp e2e
       #or
-    gulp protractor:src
+    gulp e2e:src
     
     #for production build testing
-    gulp protractor:dist
+    gulp e2e:dist
     ```
   
 ## Tools and Tech
