@@ -23,16 +23,23 @@
 						md-input-container(flex)
 							label Email
 							input(ng-model='user.email')
+					p Sex :
+						md-radio-group(ng-model='user.sex', layout='row')
+							md-radio-button(value='male',checked='true') Male
+							md-radio-button(value='female') Female
+					p Role :
+						md-radio-group(ng-model='user.role', layout='row')
+							md-radio-button(value='patient',checked='true') Patient
+							md-radio-button(value='doctor') Doctor
+					div(layout='row')
+						md-input-container(flex)
+							label Password
+							input(ng-model='user.password')
 
 					div(layout='row')
 						md-input-container(flex)
-							label Passcode
-							input(ng-model='user.passcode')
-
-					div(layout='row')
-						md-input-container(flex)
-							label Conform Passcode
-							input(ng-model='user.conformpasscode')
+							label Conform Password
+							input(ng-model='user.conformpassword')
 
 					div(layout='row')
 						md-input-container(flex, layout='column', layout-gt-xs='row', layout-align='center', layout-align-gt-xs='center center')
