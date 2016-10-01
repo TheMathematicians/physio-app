@@ -12,34 +12,34 @@
 					div(layout='row')
 						md-input-container(flex)
 							label Username
-							input(ng-model='user.username')
+							input(ng-model='registration.user.username')
 
 					div(layout='row')
 						md-input-container(flex)
 							label Mobile No
-							input(ng-model='user.mobileno')
+							input(ng-model='registration.user.mobileno')
 
 					div(layout='row')
 						md-input-container(flex)
 							label Email
-							input(ng-model='user.email')
+							input(ng-model='registration.user.email')
 					p Sex :
-						md-radio-group(ng-model='user.sex', layout='row')
+						md-radio-group(ng-model='registration.user.sex', layout='row')
 							md-radio-button(value='male',checked='true') Male
 							md-radio-button(value='female') Female
 					p Role :
-						md-radio-group(ng-model='user.role', layout='row')
+						md-radio-group(ng-model='registration.user.role', layout='row')
 							md-radio-button(value='patient',checked='true') Patient
 							md-radio-button(value='doctor') Doctor
 					div(layout='row')
 						md-input-container(flex)
 							label Password
-							input(ng-model='user.password')
+							input(ng-model='registration.user.password')
 
 					div(layout='row')
 						md-input-container(flex)
-							label Conform Password
-							input(ng-model='user.conformpassword')
+							label Confirm Password
+							input(ng-model='registration.user.confirmpassword')
 
 					div(layout='row')
 						md-input-container(flex, layout='column', layout-gt-xs='row', layout-align='center', layout-align-gt-xs='center center')
