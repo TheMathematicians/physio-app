@@ -40,6 +40,15 @@ function listFiles() {
   return files;
 }
 
+var plugins = [
+  'karma-phantomjs-launcher',
+  'karma-angular-filesort',
+  'karma-phantomjs-shim',
+  'karma-coverage',
+  'karma-jasmine',
+  'karma-ng-html2js-preprocessor'
+];
+
 module.exports = function(config) {
 
   var configuration = {
@@ -64,14 +73,7 @@ module.exports = function(config) {
 
     browsers : ['PhantomJS'],
 
-    plugins : [
-      'karma-phantomjs-launcher',
-      'karma-angular-filesort',
-      'karma-phantomjs-shim',
-      'karma-coverage',
-      'karma-jasmine',
-      'karma-ng-html2js-preprocessor'
-    ],
+    plugins : plugins,
 
     coverageReporter: {
       type : 'html',
@@ -110,3 +112,5 @@ module.exports = function(config) {
 
   config.set(configuration);
 };
+
+module.exports.plugins = plugins;

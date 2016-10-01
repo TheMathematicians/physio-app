@@ -6,6 +6,9 @@ var conf = require('./conf');
 
 var karma = require('karma');
 
+var configFilePath = path.join(__dirname, '/../karma.conf.js');
+var karmaPlugins = require(configFilePath).plugins;
+
 var pathSrcHtml = [
   path.join(conf.paths.tmp, '/serve/**/*.html'),
   path.join(conf.paths.src, '/**/*.html')
@@ -15,9 +18,11 @@ var pathSrcJs = [
   path.join(conf.paths.src, '/**/!(*.spec).js')
 ];
 
-function runTests (singleRun, done) {
-  var reporters = ['progress'];
+function runTests(singleRun, done) {
+  var reporters = ['spec'];
   var preprocessors = {};
+
+  karmaPlugins.push('karma-spec-reporter');
 
   pathSrcHtml.forEach(function(path) {
     preprocessors[path] = ['ng-html2js'];
@@ -31,10 +36,11 @@ function runTests (singleRun, done) {
   }
 
   var localConfig = {
-    configFile: path.join(__dirname, '/../karma.conf.js'),
+    configFile: configFilePath,
     singleRun: singleRun,
     autoWatch: !singleRun,
     reporters: reporters,
+    plugins: karmaPlugins,
     preprocessors: preprocessors
   };
 
