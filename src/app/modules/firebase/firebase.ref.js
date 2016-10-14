@@ -5,11 +5,15 @@
 		.factory('fbRef', refFactory);
 
 	/** @ngInject */
-	function refFactory() {
+	function refFactory($firebaseObject, $log) {
 		var factory = {};
 
 		factory.ref = function(path) {
 			return firebase.database().ref(path);
+		};
+
+		factory.refObject = function(path) {
+			return $firebaseObject(factory.ref(path));
 		};
 
 		return factory;

@@ -1,5 +1,5 @@
 (function() {
 	'use strict';
 
-	angular.module('fBase', ['firebase']);
+	angular.module('fBase', ['firebase', 'util']);
 })();

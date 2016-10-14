@@ -6,10 +6,24 @@
     .controller('LoginController', LoginController);
 
   /** @ngInject */
-  function LoginController($mdMedia) {
+  function LoginController($mdMedia, dbAuth, $log) {
     var vm = this;
 
     // Media query from angular material
     vm.$mdMedia = $mdMedia;
+
+    vm.user = {
+      email: null,
+      password: null
+    };
+
+    vm.doLogin = function() {
+      dbAuth
+        .authenticate(vm.user.email, vm.user.password)
+        .then(function() {
+          $log.debug('dbAuth.currentUser', dbAuth.currentUser);
+        })
+        .catch(function() {});
+    };
   }
 })();
