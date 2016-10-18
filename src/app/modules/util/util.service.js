@@ -8,7 +8,7 @@
   /** @ngInject */
   function UtilFactory() {
     var factory = {};
-    var pathSeparator = '/';
+    var PATH_SEPARATOR = '/';
 
     factory.formatString = function() {
       var args = arguments;
@@ -19,7 +19,7 @@
 
     factory.joinPath = function() {
       var args = Array.prototype.slice.call(arguments, 0);
-      return args.join(pathSeparator);
+      return args.join(PATH_SEPARATOR);
     };
 
     return factory;

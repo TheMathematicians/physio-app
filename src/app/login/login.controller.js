@@ -19,7 +19,7 @@
 
     vm.doLogin = function() {
       dbAuth
-        .authenticate(vm.user.email, vm.user.password)
+        .authenticate(vm.user)
         .then(function() {
           $log.debug('dbAuth.currentUser', dbAuth.currentUser);
         })
