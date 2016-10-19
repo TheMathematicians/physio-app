@@ -6,7 +6,7 @@
     .factory('dbAuth', AuthFactory);
 
   /** @ngInject */
-  function AuthFactory(fbRef, $firebaseAuth, $q, fbErrors, PATHS, Util) {
+  function AuthFactory(fbRef, $firebaseAuth, $q, PATHS, Util) {
     var factory = {};
 
     var authObj = $firebaseAuth();
